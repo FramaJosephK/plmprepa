@@ -1,7 +1,5 @@
 #opener {
-    position: absolute;
-    top: 41px;
-    left: 0px;
+    position: relative;
     width: 30px;
     height: 30px; 
     
@@ -13,8 +11,7 @@
 }
 
 #drawer {
-    position: absolute;
-    top: 41px;
+    position: relative;
     left: -440px;
     width: 400px;
     padding: 0px 20px;
@@ -22,6 +19,10 @@
     border-bottom: solid black 1px;
     background-color: white;
     z-index: 10;
+}
+
+#drawer h3:first-of-type {
+    margin-top: 0px;
 }
 
 #drawer p {
@@ -37,7 +38,7 @@
 }
 
 #close-drawer {
-    float: right;
+    text-align: right;
     font-size: 22px;
 }
 
