@@ -1,3 +1,77 @@
+/* Default style */
+body {
+    background-color: #E5E8ED;
+    font-family: Sans;
+    margin: 0px;
+}
+
+a {
+    color: #0C5B7A;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #18a5d9;
+}
+
+p {
+    color: #777;
+    font-size: 1em;
+}
+
+/* Header style */
+.header {
+    padding: 30px;
+    background-color: white;
+    border-bottom: 1px solid #CCC;
+}
+
+.header h1 {
+    font-size: 400%;
+    font-weight: 200;
+    letter-spacing: -1px;
+    color: #9BAE5F;
+    margin: 20px;
+}
+
+.header h2 {
+    color: #777;
+    font-size: 150%;
+    line-height: 160%;
+    font-weight: 500;
+    margin: 20px;
+}
+
+.header .btn-donate {
+    margin: 50px auto;
+    float: right;
+    text-align: center;
+}
+
+.header .btn {
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    padding: 0.7em;
+    line-height: 140%;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #CC2D18;
+    background-image: -webkit-linear-gradient(top, #CC2D18, #CC2D18);
+    background-image: linear-gradient(top, #CC2D18, #CC2D18);
+    border: 1px solid #DBA306;
+    color: #FFF;
+}
+
+.header .btn:hover {
+    background-color: #9BAE5F;
+    background-image: -webkit-linear-gradient(top, #9BAE5F, #9BAE5F);
+    background-image: linear-gradient(top, #9BAE5F, #9BAE5F);
+    border: 1px solid #9BAE5F;
+}
+/* End header style */
+
+/* Drawer style */
 #opener {
     position: relative;
     width: 30px;
@@ -6,17 +80,19 @@
     font-size: 22px;
     text-align: center;
     background-color: white;
-    border-right: solid black 1px;
-    border-bottom: solid black 1px;
+    border-right: solid #CCC 1px;
+    border-bottom: solid #CCC 1px;
 }
 
 #drawer {
+    float:left;
+    display: none;
     position: relative;
     left: -440px;
     width: 400px;
     padding: 0px 20px;
-    border-right: solid black 1px;
-    border-bottom: solid black 1px;
+    border-right: solid #CCC 1px;
+    border-bottom: solid #CCC 1px;
     background-color: white;
     z-index: 10;
 }
@@ -35,29 +111,16 @@
 
 #opener:target + #drawer {
     left:0px;
+    display: block;
 }
 
 #close-drawer {
     text-align: right;
     font-size: 22px;
 }
+/* End drawer style */
 
-html {
-    height: 100%;
-}
-
-body {
-    background-color: #E5E8ED;
-    padding: 0;
-    font-family: Sans;
-    position: relative;
-    margin: 0;
-    height: 100%;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizelegibility;
-}
-
-/* Couleurs Framasoft */
+/* Framasoft colors */
 .violet {
     font-weight: bold;
     color: #6A5687;
@@ -87,21 +150,7 @@ body {
     font-weight: bold;
     color: #DBA306;
 }
-
-/* Fin Couleurs Framasoft */
-a {
-    color: #0C5B7A;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #18a5d9;
-}
-
-p {
-    color: #777;
-    font-size: 1em;
-}
+/* End Framasoft colors*/
 
 .precisions {
     text-align: right;
@@ -110,157 +159,7 @@ p {
     padding-top: 4px;
 }
 
-.header {
-    padding: 30px;
-    background-color: white;
-}
-
-.wrapper {
-    height: auto !important;
-    height: 100%;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-a {
-    text-decoration: none;
-}
-
-h1 {
-    font-size: 400%;
-    font-weight: 200;
-    letter-spacing: -1px;
-    color: #9BAE5F;
-    margin: 20px;
-}
-
-h2 {
-    color: #777;
-    font-size: 150%;
-    line-height: 160%;
-    font-weight: 500;
-    margin: 20px;
-}
-
-.pointer {
-    color: #00B0FF;
-    font-family: Sans;
-    font-size: 24px;
-    margin-top: 15px;
-    position: absolute;
-    top: 130px;
-    right: -40px;
-}
-
-.pointer2 {
-    color: #00B0FF;
-    font-family: Sans;
-    font-size: 24px;
-    margin-top: 15px;
-    position: absolute;
-    top: 130px;
-    left: -40px;
-}
-
-pre {
-    margin: 80px auto;
-}
-
-pre code {
-    padding: 35px;
-    border-radius: 5px;
-    font-size: 15px;
-    background: rgba(0, 0, 0, 0.1);
-    border: rgba(0, 0, 0, 0.05) 5px solid;
-    max-width: 500px;
-}
-
-.main {
-    float: left;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.main h1.demo1 {
-    background: #1ABC9C;
-}
-
-.reload.bell {
-    font-size: 12px;
-    padding: 20px;
-    width: 45px;
-    text-align: center;
-    height: 47px;
-    border-radius: 50px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-}
-
-.reload.bell #notification {
-    font-size: 25px;
-    line-height: 140%;
-}
-
-.reload,.btn {
-    display: inline-block;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    display: inline-block;
-    line-height: 100%;
-    padding: 0.7em;
-    text-decoration: none;
-    width: 100px;
-    line-height: 140%;
-    font-size: 17px;
-    font-family: Sans;
-    font-weight: bold;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    background-color: #4D90FE;
-    background-image: -webkit-linear-gradient(top, #4D90FE, #4787ED);
-    background-image: linear-gradient(top, #4d90fe, #4787ed);
-    border: 1px solid #3079ED;
-    color: #FFF;
-}
-
-.reload:hover {
-    background: #DBA306;
-}
-
-.btn {
-    width: 200px;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    background-color: #CC2D18;
-    background-image: -webkit-linear-gradient(top, #CC2D18, #CC2D18);
-    background-image: linear-gradient(top, #CC2D18, #CC2D18);
-    border: 1px solid #DBA306;
-    color: #FFF;
-}
-
-.clear {
-    width: auto;
-}
-
-.btn:hover,.btn:hover {
-    width: 200px;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    background-color: #9BAE5F;
-    background-image: -webkit-linear-gradient(top, #9BAE5F, #9BAE5F);
-    background-image: linear-gradient(top, #9BAE5F, #9BAE5F);
-    border: 1px solid #9BAE5F;
-    color: #FFF;
-}
-
-.btn-donate {
-    margin: 50px auto;
-    float: right;
-    text-align: center;
-}
-
-.back {
+.goback {
     position: absolute;
     top: 0;
     left: 0;
@@ -281,10 +180,31 @@ pre code {
     transition: all 200ms ease-out;
 }
 
-.back:hover {
+.goback:hover {
     background: #eee;
 }
 
+/* Tips */
+.tips {
+    float: left;
+    list-style: none;
+}
+
+.tips li {
+    float:left;
+    background-color: white;
+    padding: 20px;
+    border-bottom: 1px solid #CCC;
+    border-top: 1px solid #EEE;
+    box-shadow: 0px 9px 15px -10px rgba(0, 0, 0, 0.7);
+    margin: 12px;
+}
+
+.back {
+    display: none;
+}
+
+/*
 .page-container {
     max-width: 1010px;
     margin: auto;
@@ -298,9 +218,9 @@ pre code {
 }
 
 .page-container h3 {
-    font-family: Sans;
     font-size: 23px;
 }
+
 
 .tip {
     display: none;
