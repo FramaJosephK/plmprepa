@@ -74,10 +74,10 @@ p {
 /* Drawer style */
 #opener {
     position: relative;
-    width: 30px;
-    height: 30px; 
+    width: 42px;
+    height: 42px; 
     
-    font-size: 22px;
+    font-size: 30px;
     text-align: center;
     background-color: white;
     border-right: solid #CCC 1px;
@@ -88,8 +88,8 @@ p {
     float:left;
     display: none;
     position: relative;
-    left: -440px;
-    width: 400px;
+    left: -25%;
+    width: 25%;
     padding: 0px 20px;
     border-right: solid #CCC 1px;
     border-bottom: solid #CCC 1px;
@@ -120,37 +120,13 @@ p {
 }
 /* End drawer style */
 
-/* Framasoft colors */
-.violet {
-    font-weight: bold;
-    color: #6A5687;
+.page-container {
+    float: right;
 }
 
-.orange {
-    font-weight: bold;
-    color: #EB7E41;
+#opener:target + #drawer + .page-container {
+    width: 71%;
 }
-
-.vert {
-    font-weight: bold;
-    color: #9BAE5F;
-}
-
-.bleu {
-    font-weight: bold;
-    color: #0C5B7A;
-}
-
-.rouge {
-    font-weight: bold;
-    color: #CC2D18;
-}
-
-.jaune {
-    font-weight: bold;
-    color: #DBA306;
-}
-/* End Framasoft colors*/
 
 .precisions {
     text-align: right;
@@ -188,6 +164,7 @@ p {
 .tips {
     float: left;
     list-style: none;
+    padding: 0px;
 }
 
 .tips li {
