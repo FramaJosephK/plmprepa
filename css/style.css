@@ -75,26 +75,33 @@ p {
 #opener {
     position: relative;
     width: 42px;
-    height: 42px; 
     float:left;
     font-size: 30px;
     text-align: center;
     background-color: white;
     border-right: solid #CCC 1px;
     border-bottom: solid #CCC 1px;
+    -moz-transition:all 1s;
+    -webkit-transition:all 1s;
+    -o-transition:all 1s;
+    transition:all 1s;
 }
 
 #drawer {
     float:left;
-    display: none;
     position: relative;
-    left: -25%;
+    left: -42%;
     width: 25%;
     padding: 0px 20px;
     border-right: solid #CCC 1px;
     border-bottom: solid #CCC 1px;
     background-color: white;
     z-index: 10;
+    
+    -moz-transition:all 0.5s;
+    -webkit-transition:all 0.5s;
+    -o-transition:all 0.5s;
+    transition:all 0.5s;
 }
 
 #drawer h3:first-of-type {
@@ -106,7 +113,7 @@ p {
 }
 
 #opener:target {
-    display: none;
+  left: -42%;
 }
 
 #opener:target + #drawer {
