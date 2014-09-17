@@ -169,10 +169,11 @@ p {
 }
 
 .tips li {
+    position: relative;
     width: 280px;
+    height: 140px;
     float:left;
     background-color: white;
-    padding: 25px;
     border-bottom: 1px solid #CCC;
     border-top: 1px solid #EEE;
     box-shadow: 0px 9px 15px -10px rgba(0, 0, 0, 0.7);
@@ -195,16 +196,16 @@ p {
     border-bottom: 3px solid #DBA306;
 }
 
+.tips .front {
+    padding: 20px;
+}
+
 .tips h4 {
     margin-top: 0px;
     margin-bottom: 12px;
     font-size: 1.2em;
     color: #6A5687;
     font-weight: bold;
-}
-
-.back {
-    display: none;
 }
 
 .front_old:before {
@@ -219,6 +220,34 @@ p {
 .front_new:before {
     content: "# ";
     color: #CC2D18;
+}
+
+.back {
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    height: 100px;
+    width: 90%;
+    padding: 20px;
+    opacity: 0.9;
+	filter:alpha(opacity=90)
+	
+	-webkit-transition: all 400ms ease 0s;
+	   -moz-transition: all 400ms ease 0s;
+	     -o-transition: all 400ms ease 0s;	
+	        transition: all 400ms ease 0s;
+}
+
+.back {
+    background-color: #FFF;
+}
+
+.tips li:hover + .back {
+    display: block;
+}
+
+.back .tip {
+    display: none;
 }
 
 
