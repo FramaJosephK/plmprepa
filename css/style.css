@@ -170,34 +170,34 @@ p {
 
 .tips li {
     position: relative;
+    overflow: hidden;
     width: 280px;
     height: 140px;
     float:left;
     background-color: white;
-    border-bottom: 1px solid #CCC;
     border-top: 1px solid #EEE;
     box-shadow: 0px 9px 15px -10px rgba(0, 0, 0, 0.7);
     margin: 12px;
 }
 
-.tips li:nth-child(4n) {
+.tips li:nth-child(4n) .front, 
+.tips li:nth-child(4n) .back {
     border-bottom: 3px solid #EB7E41;
 }
 
-.tips li:nth-child(4n+1) {
+.tips li:nth-child(4n+1) .front, 
+.tips li:nth-child(4n+1) .back {
     border-bottom: 3px solid #0C5B7A;
 }
 
-.tips li:nth-child(4n+2) {
+.tips li:nth-child(4n+2) .front, 
+.tips li:nth-child(4n+2) .back {
     border-bottom: 3px solid #CC2D18;
 }
 
-.tips li:nth-child(4n+3) {
+.tips li:nth-child(4n+3) .front, 
+.tips li:nth-child(4n+3) .back {
     border-bottom: 3px solid #DBA306;
-}
-
-.tips .front {
-    padding: 20px;
 }
 
 .tips h4 {
@@ -222,15 +222,10 @@ p {
     color: #CC2D18;
 }
 
-.back {
-    display: block;
+.tip-content {
     position: absolute;
-    bottom: 0px;
-    height: 100px;
-    width: 90%;
-    padding: 20px;
-    opacity: 0.9;
-	filter:alpha(opacity=90)
+    height: 280px;
+    top: 0px;
 	
 	-webkit-transition: all 400ms ease 0s;
 	   -moz-transition: all 400ms ease 0s;
@@ -238,12 +233,14 @@ p {
 	        transition: all 400ms ease 0s;
 }
 
-.back {
-    background-color: #FFF;
+.front, .back {
+    padding: 20px;
+    height: 97px;
 }
 
-.tips li:hover + .back {
-    display: block;
+
+.tips li:hover .tip-content {
+    top: -140px;
 }
 
 .back .tip {
