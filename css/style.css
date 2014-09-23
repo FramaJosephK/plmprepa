@@ -224,6 +224,7 @@ p {
 
 .tip-content {
     position: absolute;
+    width: 280px;
     height: 280px;
     top: 0px;
 	
@@ -241,6 +242,10 @@ p {
 
 .tips li:hover .tip-content {
     top: -140px;
+}
+
+.back_content {
+    
 }
 
 .back .tip {
@@ -382,13 +387,6 @@ p {
 
 .tc_back_title {
     font-size: 115%;
-}
-
-.tc_back_content {
-    font-size: 80%;
-    padding-left: 2%;
-    padding-right: 2%;
-    font-weight: 600;
 }
 
 .tobuild {
