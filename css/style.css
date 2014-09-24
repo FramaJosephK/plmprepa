@@ -1,4 +1,11 @@
 /* Default style */
+* {   
+    -moz-transition:all 0.5s;
+    -webkit-transition:all 0.5s;
+    -o-transition:all 0.5s;
+    transition:all 0.5s;
+}
+
 body {
     background-color: #E5E8ED;
     font-family: Sans;
@@ -72,36 +79,23 @@ p {
 /* End header style */
 
 /* Drawer style */
-#opener {
-    position: relative;
-    width: 42px;
-    float:left;
-    font-size: 30px;
-    text-align: center;
-    background-color: white;
-    border-right: solid #CCC 1px;
-    border-bottom: solid #CCC 1px;
-    -moz-transition:all 1s;
-    -webkit-transition:all 1s;
-    -o-transition:all 1s;
-    transition:all 1s;
+#menu {
+    position: absolute;
+    width: 500px;
+    left: -440px;
+}
+
+#mainHeader:target + #menu {
+    left: 0px;
 }
 
 #drawer {
-    float:left;
-    position: relative;
-    left: -42%;
-    width: 25%;
+    float: left;
+    width: 400px;
     padding: 0px 20px;
     border-right: solid #CCC 1px;
     border-bottom: solid #CCC 1px;
     background-color: white;
-    z-index: 10;
-    
-    -moz-transition:all 0.5s;
-    -webkit-transition:all 0.5s;
-    -o-transition:all 0.5s;
-    transition:all 0.5s;
 }
 
 #drawer h3:first-of-type {
@@ -112,13 +106,14 @@ p {
     text-align: justify;
 }
 
-#opener:target {
-  left: -42%;
-}
-
-#opener:target + #drawer {
-    left:0px;
-    display: block;
+#opener {
+    float: left;
+    width: 42px;
+    font-size: 30px;
+    text-align: center;
+    background-color: white;
+    border-right: solid #CCC 1px;
+    border-bottom: solid #CCC 1px;
 }
 
 #close-drawer {
@@ -128,12 +123,11 @@ p {
 /* End drawer style */
 
 .page-container {
-    float: right;
-    width: 96%;
+    margin-left: 60px;
 }
 
-#opener:target + #drawer + .page-container {
-    width: 71%;
+#mainHeader:target + #menu + .page-container {
+    margin-left: 480px;
 }
 
 .precisions {
